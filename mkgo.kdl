@@ -1,0 +1,22 @@
+layout {
+    pane size=1 borderless=true {
+        plugin location="zellij:tab-bar"
+    }
+    pane split_direction="vertical" {
+        pane {
+            command "air"
+            name "Running"
+            size "40%"
+        }
+        pane {
+            command "nvim"
+            args "."
+            focus true
+            name "Editing"
+            size "60%"
+        }
+    }
+    pane size=2 borderless=true {
+        plugin location="zellij:status-bar"
+    }
+}
